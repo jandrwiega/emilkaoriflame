@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@-webkit-keyframes podkreslenie {
+  0% {
+    flex-basis: 0%;
+  }
+  100% {
+    flex-basis: 100%;
+  }
+}
+@keyframes podkreslenie {
+  0% {
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
+  }
+  100% {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.hamburger {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__hamburger {
+  -webkit-transition: all .2s .2s ease-in-out;
+  transition: all .2s .2s ease-in-out;
+}
+
+.hamburger__box {
+  display: inline-block;
+  z-index: 10;
+  width: 40px;
+  height: 50px;
+  position: absolute;
+}
+
+.hamburger__box:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 5px;
+  background-color: silver;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: background-color .3s .2s ease-in-out;
+  transition: background-color .3s .2s ease-in-out;
+}
+
+.hamburger__inner::before, .hamburger__inner::after {
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: silver;
+  position: absolute;
+  -webkit-transition: -webkit-transform .3s .2s ease-in-out;
+  transition: -webkit-transform .3s .2s ease-in-out;
+  transition: transform .3s .2s ease-in-out;
+  transition: transform .3s .2s ease-in-out, -webkit-transform .3s .2s ease-in-out;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+  min-height: 100vh;
+  z-index: 10;
+  background-color: #800000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'lato', sans-serif;
+}
+
+@media (max-width: 799px) {
+  .navigation {
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation {
+    width: 50%;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
+@media (max-width: 799px) {
+  .navigation--active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation--active {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.nav__box {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 799px) {
+  .nav__box {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav__box {
+    margin-top: 80px;
+  }
+}
+
+.onas, .oferta, .realizacja, .kontakt {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 80px;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.onas a, .oferta a, .realizacja a, .kontakt a {
+  text-decoration: none;
+  color: silver;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: calc(100% - 5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.onas:hover, .oferta:hover, .realizacja:hover, .kontakt:hover {
+  cursor: pointer;
+}
+
+.onas:hover a, .oferta:hover a, .realizacja:hover a, .kontakt:hover a {
+  color: white;
+}
+
+.onas:hover a ~ .nav--border, .oferta:hover a ~ .nav--border, .realizacja:hover a ~ .nav--border, .kontakt:hover a ~ .nav--border {
+  background-color: white;
+  -webkit-animation-name: podkreslenie;
+          animation-name: podkreslenie;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.nav--border {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 5px;
+}
+/*# sourceMappingURL=openmenu.css.map */

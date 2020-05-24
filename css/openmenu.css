@@ -102,7 +102,7 @@
 .navigation {
   min-height: 100vh;
   z-index: 10;
-  background-color: #800000;
+  background-color: #222222;
   position: fixed;
   top: 0;
   left: 0;
@@ -113,6 +113,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -149,10 +151,18 @@
   }
 }
 
+.nav--blank {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 80px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcce6));
+  background-image: linear-gradient(#ffcce6);
+}
+
 .nav__box {
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
-  height: 350px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: calc(100% - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,22 +170,9 @@
       flex-wrap: wrap;
 }
 
-@media (max-width: 799px) {
-  .nav__box {
-    margin-top: 80px;
-  }
-}
-
-@media (min-width: 800px) {
-  .nav__box {
-    margin-top: 80px;
-  }
-}
-
-.onas, .oferta, .realizacja, .kontakt {
+.onas, .zajecia, .kosmetyki, .katalogi, .kontakt {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 80px;
   font-size: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,16 +182,31 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-.onas a, .oferta a, .realizacja a, .kontakt a {
+@media (orientation: portrait) {
+  .onas, .zajecia, .kosmetyki, .katalogi, .kontakt {
+    height: calc((100vh - 80px)/5);
+  }
+}
+
+@media (orientation: landscape) {
+  .onas, .zajecia, .kosmetyki, .katalogi, .kontakt {
+    height: calc((100vh - 80px)/5);
+  }
+}
+
+.onas a, .zajecia a, .kosmetyki a, .katalogi a, .kontakt a {
   text-decoration: none;
-  color: silver;
+  color: white;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: calc(100% - 5px);
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,27 +218,80 @@
           align-items: center;
 }
 
-.onas:hover, .oferta:hover, .realizacja:hover, .kontakt:hover {
+@media (max-width: 799px) {
+  .onas a, .zajecia a, .kosmetyki a, .katalogi a, .kontakt a {
+    font-size: 1rem;
+  }
+}
+
+.onas:hover, .zajecia:hover, .kosmetyki:hover, .katalogi:hover, .kontakt:hover {
   cursor: pointer;
+  /*a ~ .nav--border
+{
+    background-color: white;
+    animation-name: podkreslenie;
+    animation-duration: .8s;
+    animation-iteration-count: initial;
+}
+}
+.nav--border
+{
+    flex-basis: 100%;
+    height: 5px; 
+}*/
 }
 
-.onas:hover a, .oferta:hover a, .realizacja:hover a, .kontakt:hover a {
-  color: white;
+.onas:hover a, .zajecia:hover a, .kosmetyki:hover a, .katalogi:hover a, .kontakt:hover a {
+  font-weight: bold;
 }
 
-.onas:hover a ~ .nav--border, .oferta:hover a ~ .nav--border, .realizacja:hover a ~ .nav--border, .kontakt:hover a ~ .nav--border {
-  background-color: white;
-  -webkit-animation-name: podkreslenie;
-          animation-name: podkreslenie;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
+.onas {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcce6), to(#ecc6c6));
+  background-image: linear-gradient(#ffcce6, #ecc6c6);
 }
 
-.nav--border {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 5px;
+.onas:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
+  background-image: linear-gradient(blue);
+}
+
+.zajecia {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecc6c6), to(#ff9999));
+  background-image: linear-gradient(#ecc6c6, #ff9999);
+}
+
+.zajecia:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
+  background-image: linear-gradient(blue);
+}
+
+.kosmetyki {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9999), to(#d27979));
+  background-image: linear-gradient(#ff9999, #d27979);
+}
+
+.kosmetyki:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
+  background-image: linear-gradient(blue);
+}
+
+.katalogi {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d27979), to(#ac3939));
+  background-image: linear-gradient(#d27979, #ac3939);
+}
+
+.katalogi:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
+  background-image: linear-gradient(blue);
+}
+
+.kontakt {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ac3939));
+  background-image: linear-gradient(#ac3939);
+}
+
+.kontakt:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
+  background-image: linear-gradient(blue);
 }
 /*# sourceMappingURL=openmenu.css.map */

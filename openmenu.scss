@@ -1,3 +1,9 @@
+$onas-color: #ffcce6 ;
+$zajecia-color: #ecc6c6;
+$kosmetyki-color:#ff9999;
+$katalogi-color:#d27979;
+$kontakt-color:#ac3939;
+$navhover-color:blue;
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @keyframes podkreslenie
 {
@@ -84,13 +90,15 @@ top:10px;
         transform: translateX(200%);
     }
     z-index: 10;
-    background-color: #800000;
+    background-color: #222222;
     position: fixed;
     top: 0;
     left: 0;
+   // overflow-y: hidden;
     
     transition: transform .3s .1s ease-in-out;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     font-family: 'lato', sans-serif;
     &--active
@@ -105,51 +113,66 @@ top:10px;
         }
     }
 }
+.nav--blank
+{
+    flex-basis: 100%;
+    height: 80px;
+    background-image: linear-gradient($onas-color);
+}
 .nav__box
 {
-    flex-basis: 90%;
-    height: 350px;
+    flex-basis: 100%;
+    height: calc(100% - 80px);
    // margin-top: 50px;
    display: flex;
    flex-wrap: wrap;
-   @media(max-width: 799px)
-{
-    margin-top: 80px;
+   // margin-top: 80px;
+   // margin-bottom: 80px;
+   //padding-bottom: 80px;
 }
-@media(min-width: 800px)
-{
-    margin-top: 80px;
-}
-}
-.onas, .oferta, .realizacja, .kontakt
+.onas, .zajecia, .kosmetyki, .katalogi, .kontakt
 {
 flex-basis: 100%;
-height: 80px;
+@media(orientation: portrait)
+{
+    height: calc((100vh - 80px)/5);
+}
+@media(orientation: landscape)
+{
+    height: calc((100vh - 80px)/5);
+}
+//height: 80px;
 font-size: 32px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+align-items: center;
 
 transition: all .3s ease-in-out;
 a
 {
     text-decoration: none;
-    color: silver;
+    color: white;
     flex-basis: 100%;
-    height: calc(100% - 5px);
+    //height: calc(100% - 5px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(max-width: 799px)
+    {
+        font-size: 1rem;
+    }
 }
 }
-.onas:hover, .oferta:hover, .realizacja:hover, .kontakt:hover
+.onas:hover, .zajecia:hover, .kosmetyki:hover, .katalogi:hover, .kontakt:hover
 {
 cursor: pointer;
 a
 {
-    color: white;
+   font-weight: bold;
 }
-a ~ .nav--border
+/*a ~ .nav--border
 {
     background-color: white;
     animation-name: podkreslenie;
@@ -161,4 +184,45 @@ a ~ .nav--border
 {
     flex-basis: 100%;
     height: 5px; 
+}*/
+}
+.onas
+{
+background-image: linear-gradient($onas-color, $zajecia-color);
+}
+.onas:hover
+{
+    background-image: linear-gradient($navhover-color);
+}
+.zajecia
+{
+    background-image: linear-gradient($zajecia-color, $kosmetyki-color);
+} 
+.zajecia:hover
+{
+    background-image: linear-gradient($navhover-color);
+}
+.kosmetyki
+{
+    background-image: linear-gradient($kosmetyki-color, $katalogi-color);
+} 
+.kosmetyki:hover
+{
+    background-image: linear-gradient($navhover-color);
+}
+.katalogi
+{
+    background-image: linear-gradient($katalogi-color, $kontakt-color);
+} 
+.katalogi:hover
+{
+    background-image: linear-gradient($navhover-color);
+}
+.kontakt
+{
+    background-image: linear-gradient($kontakt-color);
+}
+.kontakt:hover
+{
+    background-image: linear-gradient($navhover-color);
 }

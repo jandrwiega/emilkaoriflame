@@ -1,5 +1,5 @@
 $maincolor:  whitesmoke;
-$logocolor: #ffb3d9;
+$logocolor: #ffcce6;
 *
 {
     margin: 0;
@@ -20,8 +20,6 @@ flex-basis: 100%;
 @media(max-width: 799px)
 {
     height: 250px;
-    position: sticky;
-top: 0;
 }
 @media(min-width: 800px)
 {
@@ -30,6 +28,8 @@ top: 0;
 display: flex;
 align-items: center;
 justify-content: center;
+position: sticky;
+top: 0;
 &--photo
 {
     flex-basis: calc(100% - 100px);
@@ -49,8 +49,14 @@ justify-content: center;
    // background-color: rosybrown;
     img
     {
-        width: 200px;
-        height: 200px;
+        @media(max-width: 799px)
+{
+    height: 230px;
+}
+@media(min-width: 800px)
+{
+    height: 180px;
+}
     }
 }
 &--hamburger
@@ -92,6 +98,8 @@ justify-content: center;
     height: 80px;  
     display: flex;
     justify-content: center;
+    background-color: $logocolor;
+    color: #222222;
     align-items: center;
     p
     {
@@ -114,4 +122,8 @@ padding: 5px;
 z-index: 999;
 position: relative;
 top: 0;
+}
+.logoimage
+{
+    transition:all .3s .3s ease-in-out;
 }

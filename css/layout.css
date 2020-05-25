@@ -16,7 +16,7 @@
 }
 
 .logo__box {
-  background-color: #ffb3d9;
+  background-color: #ffcce6;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   display: -webkit-box;
@@ -28,14 +28,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 @media (max-width: 799px) {
   .logo__box {
     height: 250px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
   }
 }
 
@@ -68,9 +68,16 @@
   }
 }
 
-.logo__box--photo img {
-  width: 200px;
-  height: 200px;
+@media (max-width: 799px) {
+  .logo__box--photo img {
+    height: 230px;
+  }
+}
+
+@media (min-width: 800px) {
+  .logo__box--photo img {
+    height: 180px;
+  }
 }
 
 .logo__box--hamburger {
@@ -127,6 +134,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #ffcce6;
+  color: #222222;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -155,5 +164,10 @@
     height: 80px;
     width: 80px;
   }
+}
+
+.logoimage {
+  -webkit-transition: all .3s .3s ease-in-out;
+  transition: all .3s .3s ease-in-out;
 }
 /*# sourceMappingURL=layout.css.map */

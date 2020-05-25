@@ -9,12 +9,28 @@ const optionbox = document.querySelector(".logo__box--hamburger");
 let topposition = hamburgerbox.offsetTop;
 let screenwindow = window.innerWidth;
 let photoposition = ((screenwindow - 200)/2)+"px";
-logo.style.paddingLeft=photoposition;
+//logo.style.paddingLeft=photoposition;
+if(screenwindow > 799)
+{
+ logo.style.paddingLeft=photoposition;
+}
+else
+{
+    logo.style.paddingLeft="4%";
+}
 function bodyresize()
 {
     screenwindow = window.innerWidth;
+    if(screenwindow > 799)
+    {
      photoposition = ((screenwindow - 200)/2) + "px";
      logo.style.paddingLeft=photoposition;
+    }
+    else
+    {
+        logo.style.paddingLeft="4%";
+    }
+    
 }
 const change = () =>
 {

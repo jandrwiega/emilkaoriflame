@@ -1,3 +1,9 @@
+/*$onas-color: #ffcce6 ;
+$zajecia-color: #ecc6c6;
+$kosmetyki-color:#ff9999;
+$katalogi-color:#d27979;
+$kontakt-color:#ac3939;
+$navhover-color:blue;*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @-webkit-keyframes podkreslenie {
   0% {
@@ -54,7 +60,7 @@
 .hamburger__inner {
   width: 100%;
   height: 5px;
-  background-color: silver;
+  background-color: #222222;
   position: absolute;
   left: 0;
   top: 50%;
@@ -69,7 +75,7 @@
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: silver;
+  background-color: #222222;
   position: absolute;
   -webkit-transition: -webkit-transform .3s .2s ease-in-out;
   transition: -webkit-transform .3s .2s ease-in-out;
@@ -155,8 +161,8 @@
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: 80px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcce6));
-  background-image: linear-gradient(#ffcce6);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecc6c6));
+  background-image: linear-gradient(#ecc6c6);
 }
 
 .nav__box {
@@ -203,7 +209,7 @@
 
 .onas a, .zajecia a, .kosmetyki a, .katalogi a, .kontakt a {
   text-decoration: none;
-  color: white;
+  color: #222;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: 100%;
@@ -241,57 +247,53 @@
 }*/
 }
 
-.onas:hover a, .zajecia:hover a, .kosmetyki:hover a, .katalogi:hover a, .kontakt:hover a {
-  font-weight: bold;
-}
-
 .onas {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcce6), to(#ecc6c6));
-  background-image: linear-gradient(#ffcce6, #ecc6c6);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecc6c6), to(#e6b3b3));
+  background-image: linear-gradient(#ecc6c6, #e6b3b3);
 }
 
 .onas:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
-  background-image: linear-gradient(blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2d9d9));
+  background-image: linear-gradient(#f2d9d9);
 }
 
 .zajecia {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecc6c6), to(#ff9999));
-  background-image: linear-gradient(#ecc6c6, #ff9999);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6b3b3), to(#dfa0a0));
+  background-image: linear-gradient(#e6b3b3, #dfa0a0);
 }
 
 .zajecia:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
-  background-image: linear-gradient(blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2d9d9));
+  background-image: linear-gradient(#f2d9d9);
 }
 
 .kosmetyki {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9999), to(#d27979));
-  background-image: linear-gradient(#ff9999, #d27979);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dfa0a0), to(#e6b3b3));
+  background-image: linear-gradient(#dfa0a0, #e6b3b3);
 }
 
 .kosmetyki:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
-  background-image: linear-gradient(blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2d9d9));
+  background-image: linear-gradient(#f2d9d9);
 }
 
 .katalogi {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d27979), to(#ac3939));
-  background-image: linear-gradient(#d27979, #ac3939);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6b3b3), to(#ecc6c6));
+  background-image: linear-gradient(#e6b3b3, #ecc6c6);
 }
 
 .katalogi:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
-  background-image: linear-gradient(blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2d9d9));
+  background-image: linear-gradient(#f2d9d9);
 }
 
 .kontakt {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ac3939));
-  background-image: linear-gradient(#ac3939);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecc6c6));
+  background-image: linear-gradient(#ecc6c6);
 }
 
 .kontakt:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(blue));
-  background-image: linear-gradient(blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2d9d9));
+  background-image: linear-gradient(#f2d9d9);
 }
 /*# sourceMappingURL=openmenu.css.map */

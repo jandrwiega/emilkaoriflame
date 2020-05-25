@@ -38,16 +38,17 @@ const change = () =>
     nav.classList.toggle("navigation--active");
     hamburgerbox.style.position="relative";
     topposition = hamburgerbox.offsetTop;
-   if(topposition == 95 || topposition == 60)
+    console.log(topposition);
+   if(topposition == 70 || topposition == 25)
     {
         if(screenwindow < 800)
         {
-        hamburgerbox.style.top="-80px";
+        hamburgerbox.style.top="-60px";
         }
         else
         {
             hamburgerbox.style.position="relative";
-           hamburgerbox.style.top="-60px";
+           hamburgerbox.style.top="-15px";
             
         }
     }

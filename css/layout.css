@@ -35,13 +35,13 @@
 
 @media (max-width: 799px) {
   .logo__box {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media (min-width: 800px) {
   .logo__box {
-    height: 200px;
+    height: 130px;
   }
 }
 
@@ -58,25 +58,25 @@
 
 @media (max-width: 799px) {
   .logo__box--photo {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media (min-width: 800px) {
   .logo__box--photo {
-    height: 200px;
+    height: 130px;
   }
 }
 
 @media (max-width: 799px) {
   .logo__box--photo img {
-    height: 230px;
+    height: 180px;
   }
 }
 
 @media (min-width: 800px) {
   .logo__box--photo img {
-    height: 180px;
+    height: 110px;
   }
 }
 
@@ -96,13 +96,13 @@
 
 @media (max-width: 799px) {
   .logo__box--hamburger {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media (min-width: 800px) {
   .logo__box--hamburger {
-    height: 200px;
+    height: 130px;
   }
 }
 
@@ -164,10 +164,5 @@
     height: 80px;
     width: 80px;
   }
-}
-
-.logoimage {
-  -webkit-transition: all .3s .3s ease-in-out;
-  transition: all .3s .3s ease-in-out;
 }
 /*# sourceMappingURL=layout.css.map */

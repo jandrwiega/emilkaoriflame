@@ -12,35 +12,12 @@ function changelogoposition()
     screenwindows = window.innerWidth;
     if(logoboxposition > 0)
     {
-        if(screenwindows < 799)
-        {
-        logobox.style.height="100px";
-        imagelogo.style.height="80px";
-        content.style.paddingTop="80px";
-        }
-        else
-        {
-            logobox.style.height="130px";
-            imagelogo.style.height="110px"; 
-            content.style.paddingTop="15px";
-        }
-        
+      // content.style.paddingTop="100px"; 
+        content.style.transition="all .1s ease-in-out";
     }
     else
     {
-        
-        if(screenwindows < 799)
-        {
-        logobox.style.height="200px";
-        imagelogo.style.height="180px";
-        content.style.paddingTop="15px";
-        }
-        else
-        {
-            logobox.style.height="130px";
-            imagelogo.style.height="110px"; 
-            content.style.paddingTop="15px";
-        }
+        content.style.paddingTop="15px"; 
     }
 }
  

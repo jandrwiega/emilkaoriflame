@@ -39,16 +39,16 @@ const change = () =>
     hamburgerbox.style.position="relative";
     topposition = hamburgerbox.offsetTop;
     console.log(topposition);
-   if(topposition == 70 || topposition == 25)
+   if(topposition == 25 || topposition == 35)
     {
         if(screenwindow < 800)
         {
-        hamburgerbox.style.top="-60px";
+        hamburgerbox.style.top="-25px";
         }
         else
         {
             hamburgerbox.style.position="relative";
-           hamburgerbox.style.top="-15px";
+           hamburgerbox.style.top="-25px";
             
         }
     }

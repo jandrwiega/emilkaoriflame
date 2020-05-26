@@ -1,0 +1,117 @@
+.kosmetyki__box {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 399px) {
+  .kosmetyki__box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 400px) {
+  .kosmetyki__box {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.kosmetyki__ctg {
+  background-color: black;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 399px) {
+  .kosmetyki__ctg {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+}
+
+@media (min-width: 400px) {
+  .kosmetyki__ctg {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+}
+
+@media (min-width: 700px) {
+  .kosmetyki__ctg {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .kosmetyki__ctg {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .kosmetyki__ctg {
+    -ms-flex-preferred-size: 19.5%;
+        flex-basis: 19.5%;
+  }
+}
+
+.kosmetyki__blank {
+  margin-bottom: 15px;
+  background-color: red;
+}
+
+@media (max-width: 399px) {
+  .kosmetyki__blank {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+}
+
+@media (min-width: 400px) {
+  .kosmetyki__blank {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+}
+
+@media (min-width: 700px) {
+  .kosmetyki__blank {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .kosmetyki__blank {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .kosmetyki__blank {
+    -ms-flex-preferred-size: 19.5%;
+        flex-basis: 19.5%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .kosmetyki__blank {
+    display: none;
+  }
+}
+
+#kosmebox {
+  margin-bottom: -15px;
+}
+/*# sourceMappingURL=kosmetyki.css.map */

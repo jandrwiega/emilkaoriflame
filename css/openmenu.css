@@ -160,9 +160,9 @@ $navhover-color:blue;*/
 
 @media (min-width: 800px) {
   .navigation {
-    width: 50%;
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
+    width: 600px;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
 }
 
@@ -175,8 +175,8 @@ $navhover-color:blue;*/
 
 @media (min-width: 800px) {
   .navigation--active {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(calc(100vw - 600px));
+            transform: translateX(calc(100vw - 600px));
   }
 }
 

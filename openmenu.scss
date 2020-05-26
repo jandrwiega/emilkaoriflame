@@ -136,8 +136,8 @@ top:10px;
     }
     @media(min-width: 800px)
     {
-        width: 50%;
-        transform: translateX(200%);
+        width: 600px;
+        transform: translateX(100vw);
     }
     z-index: 10;
     background-color: #222222;
@@ -159,7 +159,7 @@ top:10px;
         }
         @media(min-width: 800px)
         {
-            transform: translateX(100%);
+            transform: translateX(calc(100vw - 600px));
         }
     }
 }

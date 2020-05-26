@@ -84,11 +84,11 @@ top: 0;
     flex-basis: 100%;
     @media(max-width: 799px)
     {
-        min-height: calc(100vh - 1900px);
+        min-height: calc(100vh - 140px);
     }
     @media(min-width: 800px)
     {
-        min-height: calc(100vh - 140px);
+        min-height: calc(100vh - 190px);
     }
    
     background-color: $maincolor;
